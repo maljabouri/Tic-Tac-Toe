@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+  text-align: center;
+  font-size: 90px;
+}
+
+.board-square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+.board-square:first-child,
+.board-square:nth-child(2),
+.board-square:nth-child(3) {
+  border-top: none;
+}
+
+.board-square:first-child,
+.board-square:nth-child(4),
+.board-square:nth-child(7) {
+  border-left: none;
+}
+
+.board-square:nth-child(3),
+.board-square:nth-child(6),
+.board-square:nth-child(9) {
+  border-right: none;
+}
+
+.board-square:nth-child(7),
+.board-square:nth-child(8),
+.board-square:nth-child(9) {
+  border-bottom: none;
+}
+
+.board-square.x,
+.board-square.circle {
+  cursor: not-allowed
+}
