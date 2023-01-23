@@ -4,6 +4,10 @@ This is a project written as part of the GA software engineering immersive cours
 Developer: Ma-Add Al-Jabouri
 Technologies: HTML/CSS/Javascript
 
+# Game Link 
+
+https://maljabouri.github.io/Tic-Tac-Toe/
+
 # User Stories
 
 - As a user, I should be able to start a new tic tac toe game
@@ -14,3 +18,4 @@ Technologies: HTML/CSS/Javascript
 - As a user, I should not be able to continue playing once I win, lose, or tie
 - As a user, I should be able to play the game again without refreshing the page
 
+# 
