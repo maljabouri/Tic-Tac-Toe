@@ -20,21 +20,22 @@ boardSquares.forEach(boardSquare => {
 })
 
 
-//Game Logic, alternates turns, checks for winner/draw
+// Game Logic, alternates turns, checks for winner/draw
+// Also
 function onClick(e) {
     const square = e.target
     const currentTurn = circlesTurn ? classCircle : classX
     const nextTurn = circlesTurn ? classX : classCircle
     document.getElementById("game-state").innerHTML = nextTurn + "'s Turn!";
     square.innerHTML = currentTurn
-    if (checkForWinner (currentTurn)) {
+    if (checkForWinner(currentTurn)) {
         document.getElementById("game-state").innerHTML = currentTurn + ' Wins!';
     } else if (checkForDraw()) {
         document.getElementById("game-state").innerHTML = "It's a draw!";
     } else {
         swapTurn()
-    } 
-    
+    }
+
 }
 
 swapTurn = () => {
@@ -46,7 +47,7 @@ swapTurn = () => {
 checkForWinner = (currentTurn) => {
     return winningCombos.some(combination => {
         return combination.every(index => {
-            return boardSquares[index].innerHTML.includes(currentTurn) 
+            return boardSquares[index].innerHTML.includes(currentTurn)
         })
     })
 }
@@ -55,9 +56,9 @@ checkForWinner = (currentTurn) => {
 function checkForDraw() {
     var divs = document.getElementsByClassName("board-square");
     for (var i = 0; i < divs.length; i++) {
-      if (divs[i].innerHTML.trim() === "") {
-        return false;
-      }
+        if (divs[i].innerHTML.trim() === "") {
+            return false;
+        }
     }
     return true;
-  }
+}
