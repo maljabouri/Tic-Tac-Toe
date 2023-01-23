@@ -18,4 +18,19 @@ https://maljabouri.github.io/Tic-Tac-Toe/
 - As a user, I should not be able to continue playing once I win, lose, or tie
 - As a user, I should be able to play the game again without refreshing the page
 
-# 
+# Build Process
+
+I started off setting up my HTML elements to display my game on screen. I then began writing my Javascript with the user stories in mind. I started with simple event listeners to fill my grid. Moved on to alternating turns, and checking for win and draw conditions. 
+
+Unfortunately I was not able to implement the last 2 user stories into my project. 
+
+# Improvements
+
+First of all I'd like to have the last 2 user stories implemented. 
+
+Going past that features i'd like to include are: 
+
+- Score Tracker
+- Audio
+- Compatibility with other devices
+- Potentially an AI to play against 

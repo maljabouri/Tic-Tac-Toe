@@ -1,4 +1,4 @@
-// Constants required for the game
+// Variables required for the game
 let circlesTurn = false
 const boardSquares = document.querySelectorAll('[boardSquare]')
 const classCircle = "O"
