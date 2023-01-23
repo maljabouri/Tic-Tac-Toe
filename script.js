@@ -1,11 +1,6 @@
-
-// board class to create the board when new game is clicked
-// should provide a clear board which is a 3x3 grid 
-let circlesTurn
-
-
+// Constants required for the game
+let circlesTurn = false
 const boardSquares = document.querySelectorAll('[boardSquare]')
-
 const classCircle = "O"
 const classX = "X"
 const winningCombos = [
@@ -19,20 +14,23 @@ const winningCombos = [
     [2, 5, 8]
 ]
 
+//Event listener for each square
 boardSquares.forEach(boardSquare => {
     boardSquare.addEventListener('click', onClick, { once: true })
 })
 
 
-
+//Game Logic, alternates turns, checks for winner/draw
 function onClick(e) {
     const square = e.target
     const currentTurn = circlesTurn ? classCircle : classX
+    const nextTurn = circlesTurn ? classX : classCircle
+    document.getElementById("game-state").innerHTML = nextTurn + "'s Turn!";
     square.innerHTML = currentTurn
     if (checkForWinner (currentTurn)) {
         document.getElementById("game-state").innerHTML = currentTurn + ' Wins!';
-    } else if (checkForDraw("board-square")) {
-        console.log('draw')
+    } else if (checkForDraw()) {
+        document.getElementById("game-state").innerHTML = "It's a draw!";
     } else {
         swapTurn()
     } 
